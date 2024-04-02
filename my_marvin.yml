@@ -6,16 +6,16 @@ jenkins:
       users:
         - id: chocolateen
           name: Hugo
-          password: ${USER_CHOCOLATEEN_PASSWORD:chocolateen}
+          password: ${USER_CHOCOLATEEN_PASSWORD}
         - id: vaugie_g
           name: Garance
-          password: ${USER_VAUGIE_G_PASSWORD:vaugie_g}
+          password: ${USER_VAUGIE_G_PASSWORD}
         - id: i_dont_know
           name: Jeremy
-          password: ${USER_I_DONT_KNOW_PASSWORD:i_dont_know}
+          password: ${USER_I_DONT_KNOW_PASSWORD}
         - id: nasso
           name: Nassim
-          password: ${USER_NASSO_PASSWORD:nasso}
+          password: ${USER_NASSO_PASSWORD}
   systemMessage: Welcome to the Chocolatine-Powered Marvin Jenkins Instance.
   authorizationStrategy: # Pour définir les rôles
     roleBased:
