@@ -59,7 +59,7 @@ jenkins:
             entries:
               - user: "nasso"
 jobs:
-  - file: ${JOB_DSL_FILE:/var/jenkins_home/job_dsl.groovy}
+  - file: "/var/jenkins_home/job_dsl.groovy"
 security: # Pour accepter l'utilisation les scripts Groovy
   globalJobDslSecurityConfiguration:
     useScriptSecurity: false
