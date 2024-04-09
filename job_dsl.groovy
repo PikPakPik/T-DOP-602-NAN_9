@@ -1,8 +1,8 @@
-folder('Tools') {
+folder('Tools') { // On crée un dossier Tools
     description('Folder for miscellaneous tools.')
 }
 
-job('Tools/clone-repository') {
+job('Tools/clone-repository') { // Tache pour cloner un repository
     description('Job to clone a repository')
     parameters {
         stringParam('GIT_REPOSITORY_URL', '', 'Git URL of the repository to clone')
@@ -19,7 +19,7 @@ job('Tools/clone-repository') {
     }
 }
 
-job('Tools/SEED') {
+job('Tools/SEED') { // Tache pour créer d'autres taches (job) à partir d'un repository qui contient un Makefile
     description('Seed job to create other jobs')
     parameters {
         stringParam('GITHUB_NAME', '', 'GitHub repository owner/repo_name (e.g.: "EpitechIT31000/chocolatine")')
