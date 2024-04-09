@@ -1,0 +1,23 @@
+name: Copy repository to EpitechMscProPromo2026
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: git-mirror
+
+jobs:
+  git-mirror:
+    if: github.repository == 'PikPakPik/T-DOP-602-NAN_9'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        with:
+          source-repo: "git@github.com:PikPakPik/T-DOP-602-NAN_9.git"
+          destination-repo: "git@github.com:EpitechMscProPromo2026/T-DOP-602-NAN_9.git"
